@@ -82,8 +82,8 @@ const applySiteConfig = () => {
 
   setHref("#footer-phone", school.phone ? `tel:${school.phone}` : "");
   setHref("#footer-email", school.email ? `mailto:${school.email}` : "");
-  setText("#enrollment-phone", school.phone);
-  setText("#enrollment-email", school.email);
+  setText("#enrollment-phone-text", school.phone);
+  setText("#enrollment-email-text", school.email);
   setHref("#enrollment-phone", school.phone ? `tel:${school.phone}` : "");
   setHref("#enrollment-email", school.email ? `mailto:${school.email}` : "");
 

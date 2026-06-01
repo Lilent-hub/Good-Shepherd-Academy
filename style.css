@@ -288,6 +288,7 @@ h1 {
 .hero-panel {
   padding: 28px;
   border-top: 8px solid var(--gold);
+  min-width: 0;
 }
 
 .hero-panel h2 {
@@ -297,11 +298,34 @@ h1 {
 
 .quick-contact {
   display: grid;
-  gap: 8px;
+  gap: 12px;
   margin-top: 22px;
   color: var(--blue);
   font-weight: 700;
+  min-width: 0;
+}
+
+.contact-line {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
   overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  background: rgba(212, 160, 23, 0.18);
+  color: var(--maroon);
+  font-size: 1rem;
+  line-height: 1;
 }
 
 .content-section {
@@ -427,12 +451,12 @@ h1 {
 
 .enrollment-contact {
   display: grid;
-  gap: 10px;
+  gap: 12px;
   margin: 16px 0 24px;
   color: var(--blue);
   font-size: 1.05rem;
   font-weight: 700;
-  overflow-wrap: anywhere;
+  min-width: 0;
 }
 
 .compact {

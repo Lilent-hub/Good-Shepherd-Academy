@@ -277,8 +277,7 @@ h1 {
 }
 
 .hero-panel,
-.mission-box,
-.steps-panel {
+.contact-panel {
   border-radius: var(--radius);
   background: var(--white);
   color: var(--charcoal);
@@ -333,16 +332,6 @@ h1 {
 .text-stack {
   color: var(--muted);
   font-size: 1.02rem;
-}
-
-.mission-box {
-  margin-top: 24px;
-  padding: 26px;
-  border-left: 7px solid var(--gold);
-}
-
-.mission-box h3 {
-  color: var(--blue);
 }
 
 .gold-divider {
@@ -427,21 +416,22 @@ h1 {
   font-weight: 700;
 }
 
-.steps-panel {
+.contact-panel {
   padding: 30px;
 }
 
-.steps-panel h3 {
+.contact-panel h3 {
   color: var(--maroon);
 }
 
-.steps-panel ol {
-  padding-left: 22px;
-  margin: 0 0 24px;
-}
-
-.steps-panel li + li {
-  margin-top: 10px;
+.enrollment-contact {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 24px;
+  color: var(--blue);
+  font-size: 1.05rem;
+  font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .compact {

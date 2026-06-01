@@ -12,8 +12,8 @@ window.GSA_SITE_CONFIG = {
 
   images: {
     // Put image files inside /public/images, then update these paths.
-    // Example: logo: "/images/gsa-logo.png"
-    logo: "/images/gsa-logo.png",
+    // Example: logo: "images/gsa-logo.png"
+    logo: "images/gsa-logo.png",
     heroBackground: "",
   },
 

@@ -7,7 +7,7 @@ window.GSA_SITE_CONFIG = {
     schoolId: "405582",
     address: "5558 Tadeco Rd., New Visayas, Panabo City",
     phone: "09194418075",
-    email: "gonzalesludeline@gmail.com",
+    email: "goodshepherdacademypanabo@gmail.com",
   },
 
   images: {

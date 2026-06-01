@@ -1,0 +1,12 @@
+{
+  "name": "good-shepherd-academy",
+  "version": "1.0.0",
+  "description": "Landing page for Good Shepherd Academy served with Node.js and Express.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

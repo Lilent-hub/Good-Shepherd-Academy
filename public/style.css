@@ -1,0 +1,559 @@
+:root {
+  --maroon: #7b1c2e;
+  --blue: #1a3a8f;
+  --gold: #d4a017;
+  --gold-soft: #f6e5b0;
+  --charcoal: #252525;
+  --muted: #626262;
+  --white: #ffffff;
+  --surface: #fffaf0;
+  --shadow: 0 18px 45px rgba(37, 37, 37, 0.14);
+  --radius: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--charcoal);
+  background: var(--white);
+  font-family: "Poppins", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--maroon);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.nav-shell {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.brand-mark,
+.footer-mark {
+  width: 46px;
+  height: 46px;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: var(--gold);
+  color: var(--maroon);
+  font-size: 0.88rem;
+  letter-spacing: 0;
+  overflow: hidden;
+}
+
+.brand-text {
+  font-size: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.nav-links a {
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+.nav-toggle {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: var(--radius);
+  background: transparent;
+  display: none;
+  place-items: center;
+  padding: 9px;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--gold);
+  display: block;
+  margin: 3px 0;
+}
+
+.section-inner {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 72px);
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(123, 28, 46, 0.96) 0%, rgba(123, 28, 46, 0.9) 42%, rgba(26, 58, 143, 0.94) 100%),
+    radial-gradient(circle at 20% 20%, rgba(212, 160, 23, 0.22), transparent 34%);
+  color: var(--white);
+  display: grid;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  padding: 72px 0 56px;
+}
+
+.hero-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(30deg, rgba(255, 255, 255, 0.18) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.18) 87.5%),
+    linear-gradient(150deg, rgba(255, 255, 255, 0.18) 12%, transparent 12.5%, transparent 87%, rgba(255, 255, 255, 0.18) 87.5%);
+  background-size: 56px 96px;
+}
+
+.hero-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-copy {
+  max-width: 720px;
+}
+
+.enrolling-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 7px 14px;
+  background: var(--gold);
+  color: var(--maroon);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  border-radius: 999px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.logo-badge {
+  width: 118px;
+  height: 118px;
+  margin: 28px 0 18px;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.82);
+  background: var(--gold);
+  color: var(--maroon);
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.brand-mark img,
+.footer-mark img,
+.logo-badge img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.eyebrow,
+.section-label,
+.panel-kicker {
+  margin: 0 0 10px;
+  color: var(--gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 {
+  color: var(--white);
+  font-size: clamp(2.65rem, 7vw, 5.7rem);
+  max-width: 900px;
+  margin-bottom: 14px;
+}
+
+.tagline {
+  color: var(--gold-soft);
+  font-size: clamp(1.15rem, 2.4vw, 1.65rem);
+  font-weight: 600;
+}
+
+.hero-lead {
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  padding: 13px 20px;
+  font-weight: 700;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.primary-button {
+  background: var(--gold);
+  color: var(--maroon);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.18);
+}
+
+.secondary-button {
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.76);
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.2);
+}
+
+.hero-panel,
+.mission-box,
+.steps-panel {
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--charcoal);
+  box-shadow: var(--shadow);
+}
+
+.hero-panel {
+  padding: 32px;
+  border-top: 8px solid var(--gold);
+}
+
+.hero-panel h2 {
+  color: var(--maroon);
+  font-size: 2rem;
+}
+
+.quick-contact {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+  color: var(--blue);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.content-section {
+  padding: 86px 0;
+}
+
+.soft-bg {
+  background: linear-gradient(180deg, #fffaf0 0%, #ffffff 100%);
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 54px;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+.content-section h2,
+.enrollment-section h2,
+.site-footer h2 {
+  color: var(--maroon);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+}
+
+.text-stack {
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.mission-box {
+  margin-top: 24px;
+  padding: 26px;
+  border-left: 7px solid var(--gold);
+}
+
+.mission-box h3 {
+  color: var(--blue);
+}
+
+.gold-divider {
+  width: min(1120px, calc(100% - 32px));
+  height: 4px;
+  margin: 0 auto;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.two-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.info-card,
+.feature-card {
+  min-height: 260px;
+  padding: 28px;
+  border: 1px solid rgba(123, 28, 46, 0.12);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 12px 30px rgba(37, 37, 37, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.info-card:hover,
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 160, 23, 0.75);
+  box-shadow: var(--shadow);
+}
+
+.card-icon,
+.feature-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  margin-bottom: 22px;
+  background: var(--maroon);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.info-card h3,
+.feature-card h3 {
+  color: var(--blue);
+  font-size: 1.35rem;
+}
+
+.card-meta {
+  color: var(--maroon);
+  font-weight: 700;
+}
+
+.enrollment-section {
+  padding: 88px 0;
+  color: var(--white);
+  background: linear-gradient(110deg, var(--blue) 0%, var(--maroon) 100%);
+}
+
+.enrollment-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.enrollment-banner h2 {
+  color: var(--white);
+}
+
+.cta-line {
+  color: var(--gold-soft);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.steps-panel {
+  padding: 30px;
+}
+
+.steps-panel h3 {
+  color: var(--maroon);
+}
+
+.steps-panel ol {
+  padding-left: 22px;
+  margin: 0 0 24px;
+}
+
+.steps-panel li + li {
+  margin-top: 10px;
+}
+
+.compact {
+  min-height: 44px;
+  padding: 10px 16px;
+}
+
+.site-footer {
+  background: #181818;
+  color: rgba(255, 255, 255, 0.86);
+  padding: 58px 0 22px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.site-footer h2 {
+  color: var(--white);
+  font-size: 1.6rem;
+  margin: 16px 0 12px;
+}
+
+address {
+  display: grid;
+  gap: 10px;
+  font-style: normal;
+}
+
+address strong {
+  color: var(--gold);
+}
+
+.copyright {
+  width: min(1120px, calc(100% - 32px));
+  margin: 34px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .nav-toggle {
+    display: grid;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--maroon);
+    padding: 12px 24px 22px;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 13px 0;
+  }
+
+  .hero-grid,
+  .two-column,
+  .enrollment-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 52px;
+  }
+
+  .card-grid,
+  .two-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-text {
+    max-width: 170px;
+    line-height: 1.2;
+  }
+
+  .content-section,
+  .enrollment-section {
+    padding: 64px 0;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .logo-badge {
+    width: 96px;
+    height: 96px;
+    font-size: 1.65rem;
+  }
+}

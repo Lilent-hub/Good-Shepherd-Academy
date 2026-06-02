@@ -73,19 +73,25 @@ const applySiteConfig = () => {
   setText("#school-id", school.schoolId ? `School ID: ${school.schoolId}` : "");
   setText("#quick-phone", school.phone);
   setText("#quick-email", school.email);
+  setText("#quick-facebook-text", school.facebookLabel || school.facebook);
   setText("#footer-name", school.shortName);
   setText("#footer-address", school.address);
   setText("#footer-school-id", school.schoolId ? `School ID: ${school.schoolId}` : "");
   setText("#footer-phone", school.phone);
   setText("#footer-email", school.email);
+  setText("#footer-facebook", school.facebookLabel || school.facebook);
   setText("#copyright", `(c) 2026 ${school.shortName || "Good Shepherd Academy"}. All rights reserved.`);
 
   setHref("#footer-phone", school.phone ? `tel:${school.phone}` : "");
   setHref("#footer-email", school.email ? `mailto:${school.email}` : "");
+  setHref("#footer-facebook", school.facebook);
+  setHref("#quick-facebook", school.facebook);
   setText("#enrollment-phone-text", school.phone);
   setText("#enrollment-email-text", school.email);
+  setText("#enrollment-facebook-text", school.facebookLabel || school.facebook);
   setHref("#enrollment-phone", school.phone ? `tel:${school.phone}` : "");
   setHref("#enrollment-email", school.email ? `mailto:${school.email}` : "");
+  setHref("#enrollment-facebook", school.facebook);
 
   setText("#hero-badge", config.hero?.badge);
   setText("#hero-lead", config.hero?.lead);

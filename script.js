@@ -3,6 +3,7 @@ const navLinks = document.querySelector(".nav-links");
 const config = window.GSA_SITE_CONFIG || {};
 const school = config.school || {};
 const images = config.images || {};
+const enrollment = config.enrollment || {};
 
 navToggle.addEventListener("click", () => {
   const isOpen = navLinks.classList.toggle("is-open");
@@ -95,17 +96,22 @@ const applySiteConfig = () => {
 
   setText("#hero-badge", config.hero?.badge);
   setText("#hero-lead", config.hero?.lead);
-  setText("#hero-primary-cta", config.hero?.primaryCta);
+  setText("#hero-primary-cta", enrollment.formCta);
+  setHref("#hero-primary-cta", enrollment.googleFormUrl);
   setText("#hero-secondary-cta", config.hero?.secondaryCta);
-  setText("#hero-school-year", config.enrollment?.schoolYear);
-  setText("#hero-panel-title", config.enrollment?.title);
+  setText("#hero-school-year", enrollment.schoolYear);
+  setText("#hero-panel-title", enrollment.title);
 
   const programSummary = config.programs?.map((program) => program.title).join(", ");
   setText("#hero-panel-summary", programSummary ? `${programSummary}.` : "");
 
-  setText("#enrollment-title", config.enrollment?.title);
-  setText("#enrollment-cta", config.enrollment?.cta);
-  setText("#contact-panel-title", config.enrollment?.panelTitle);
+  setText("#enrollment-title", enrollment.title);
+  setText("#enrollment-cta", enrollment.cta);
+  setText("#contact-panel-title", enrollment.panelTitle);
+  setText("#contact-enroll-cta", enrollment.formCta);
+  setHref("#contact-enroll-cta", enrollment.googleFormUrl);
+  setText("#footer-enroll-cta", enrollment.formCta);
+  setHref("#footer-enroll-cta", enrollment.googleFormUrl);
 
   renderLogo();
   renderCards("#program-cards", config.programs, "info-card", "card-icon");

@@ -68,6 +68,9 @@ window.GSA_SITE_CONFIG = {
     schoolYear: "SY 2026-2027",
     title: "Now Accepting Enrollees for School Year 2026-2027",
     cta: "Invest in Your Child's Future. Join Us!",
+    formCta: "Enroll Now",
+    // Replace this with your real Google Form link.
+    googleFormUrl: "https://forms.gle/yVbX9TitkEi2N411A",
     panelTitle: "Contact Us",
   },
 };
